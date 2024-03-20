@@ -17,13 +17,14 @@ body{
         h1{
             font-family: Montserrat;
             text-align: center;
-            font-size: calc(2.5vh + 2.5vw);
+            width: 65vw;
+            font-size: calc(2vw + 2vh);
         }
     }
     .main{
         background: #3498db;
         img{
-            width: 75vw;
+            width: 65vw;
         }
     }
 }
