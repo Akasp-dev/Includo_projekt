@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background: black;
+        color: white;
+        margin: 0;
+        &:nth-child(even){
+            background: white;
+            color: black;
+        }
+        h1{
+            font-family: Montserrat;
+            text-align: center;
+            font-size: calc(2.5vh + 2.5vw);
+        }
+    }
+    .main{
+        background: #3498db;
+        img{
+            width: 75vw;
+        }
+    }
+}
