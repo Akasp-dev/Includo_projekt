@@ -51,7 +51,8 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        background-color: #74b9ff;
+        background-image: url(./images/Shiny_Overlay.svg);
+        background-size: cover;
         box-shadow: inset 0 0 15px 2px #0985e386;
         .left_half, .right_half{
             height: 100%;
@@ -68,6 +69,8 @@ body{
                 width: 80%;
                 margin: 0;
                 padding: 0;
+                animation: up_down 3s alternate infinite ease-in-out;
+                filter: drop-shadow(5px 5px 10px rgb(78, 78, 78));
             }
         } 
         .right_half{
@@ -76,13 +79,41 @@ body{
             align-items: center;
             width: 50%;
             height: 100%;   
-            .opis{
-                background: #0984e3;
-                height: 42vw;
+            .opis{    
+                top: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-image: url(/images/tablet_bg.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-family: 'Samsung Sharp Sans';
+                color: black;
+                height: 90vh;
                 width: 42vw;
-                border-radius: 20px;
-                //box-shadow: 0 0 50px 2px #0985e3bb;
+                //border-radius: 20px;
+                .text{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: column;
+                    background: red;
+                    h1{
+                        width: 60%;
+                    }
+                    p{
+                        width: 35rem;
+                    }
+                } 
             }
         }
+    }
+}
+
+@keyframes up_down{
+    to{
+        transform: translateY(-30px);
     }
 }
