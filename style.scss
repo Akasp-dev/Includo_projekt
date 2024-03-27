@@ -1,3 +1,4 @@
+
 body{
     padding: 0;
     margin: 0;
@@ -54,59 +55,51 @@ body{
         background-image: url(./images/Shiny_Overlay.svg);
         background-size: cover;
         box-shadow: inset 0 0 15px 2px #0985e386;
-        .left_half, .right_half{
-            height: 100%;
-            width: 50%;
-        }
         .left_half{
             display: flex;
             justify-content: center;
             align-items: center;
-            //background: red;
             height: 100vh;
-            width: 50%;
             img{
                 width: 80%;
                 margin: 0;
                 padding: 0;
                 animation: up_down 3s alternate infinite ease-in-out;
-                filter: drop-shadow(5px 5px 10px rgb(78, 78, 78));
+                filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.3));
             }
         } 
         .right_half{
-            display: flex;
+            display: none;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            background-image: url(./images/mac_bg.png);
+            background-size: 100%, auto;
+            background-repeat: no-repeat;
+            background-position-y: center;
             width: 50%;
             height: 100%;   
-            .opis{    
-                top: 100px;
+            .opis{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                background-image: url(/images/tablet_bg.png);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+                margin-top: 14vh;
                 font-family: 'Samsung Sharp Sans';
                 color: black;
-                height: 90vh;
-                width: 42vw;
-                //border-radius: 20px;
-                .text{
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    flex-direction: column;
-                    background: red;
-                    h1{
-                        width: 60%;
-                    }
-                    p{
-                        width: 35rem;
-                    }
-                } 
+                height: 30vw;
+                width: 43vw;
+                h1{
+                    //margin: 0;
+                    width: 100%;
+                    color: white;
+                }
+                p{
+                    font-size: calc(3vh - 0.5vw);
+                    color: white;
+                }
+                h1, p{
+                    display: none;
+                }
             }
         }
     }
@@ -115,5 +108,15 @@ body{
 @keyframes up_down{
     to{
         transform: translateY(-30px);
+    }
+}
+@media screen and (max-width: 1200px) {
+    .right_half{
+        display: block;
+    }
+}
+@media screen and (min-width: 1200px){
+    .right_half{
+        display: block;
     }
 }
